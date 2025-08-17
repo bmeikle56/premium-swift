@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Stop from '../cmp/Stop'
 
 let palette = {
   white: 'rgb(255,255,255)',
@@ -20,6 +21,10 @@ function Home() {
     animate={{ opacity: 1 }}
     transition={{ delay: 1.2, duration: 2.0 }}
     >
+      <div style={{background: 'rgba(155, 41, 41, 1)', borderRadius: 4, fontSize: 11}}>
+        <p style={{color: 'white', margin: 0, padding: '2px 6px 2px 6px'}}>{'Card.suit not in {"h", "s", "d", "c"}'}</p>
+        {/* <p style={{color: 'white', margin: 0, padding: '2px 6px 2px 6px'}}>{'Card.rank not in [0, 13)'}</p> */}
+      </div>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4}}>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
