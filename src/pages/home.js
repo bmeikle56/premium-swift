@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion'
-import Diamond from '../cmp/Diamond'
-import PokerDegenTitle from '../cmp/Title'
-import Video from '../cmp/Video'
 import { useState } from 'react'
 import Loading from '../cmp/Loading'
-import DownloadButton from '../cmp/DownloadButton'
 
 function Home() {
   const [isLoading, setLoading] = useState(true)
@@ -18,17 +14,7 @@ function Home() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2, duration: 2.0 }}
       >
-        <div className='title-view' style={{display: 'flex', justifyContent: 'center', alignItems:'center'}}>
-          <Diamond/>
-          <PokerDegenTitle/>
-        </div>
-        <div style={{height: '10vh'}}/>
-        <div style={{display: 'flex', justifyContent: 'center', width: '80%', marginTop: -30}}>
-          <Video device={'iPhone'}/>
-          {/* <Video device={'iPad'}/> */}
-        </div>
-        <div style={{height: 40}}/>
-        <DownloadButton/>
+        <pre style={{color: 'white'}}>Coming now!</pre>
       </motion.div>
     )
   }
