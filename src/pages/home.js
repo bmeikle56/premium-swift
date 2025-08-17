@@ -3,15 +3,15 @@ import { useState } from 'react'
 import Loading from '../cmp/Loading'
 
 let palette = {
-  white: 'rgb(0,0,0)',
-  pink: 'rgb(0,0,0)',
-  cyan: 'rgb(0,0,0)',
-  fadedBlue: 'rgb(0,0,0)',
-  deepBlue: 'rgb(0,0,0)',
-  green: 'rgb(0,0,0)',
-  orange: 'rgb(0,0,0)',
-  purple: 'rgb(0,0,0)',
-  comment: 'rgb(0,0,0)',
+  white: 'rgb(255,255,255)',
+  pink: 'rgba(186, 2, 100, 1)',
+  cyan: 'rgba(1, 205, 236, 1)',
+  fadedBlue: 'rgba(0, 112, 182, 1)',
+  deepBlue: 'rgba(0, 74, 221, 1)',
+  green: 'rgba(18, 220, 0, 1)',
+  orange: 'rgba(233, 70, 0, 1)',
+  purple: 'rgba(63, 0, 235, 1)',
+  comment: 'rgba(0, 166, 3, 1)',
 }
 
 function Home() {
@@ -26,7 +26,12 @@ function Home() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.2, duration: 2.0 }}
       >
-        <pre style={{color: 'white'}}>Coming now!</pre>
+        <div style={{background: 'rgb(10,10,10)', padding: 20, borderRadius: 20, display: 'flex'}}>
+          <pre style={{color: palette.pink, display: 'inline'}}>func</pre>
+          <div style={{width: 8}}/>
+          <pre style={{color: palette.fadedBlue, display: 'inline'}}>value</pre>
+          <pre style={{color: palette.white, display: 'inline'}}>{'('}</pre>
+        </div>
       </motion.div>
     )
   }
