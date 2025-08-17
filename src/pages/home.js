@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Error from '../cmp/Error'
 
 let palette = {
   white: 'rgb(255,255,255)',
@@ -20,6 +21,10 @@ function Home() {
     animate={{ opacity: 1 }}
     transition={{ delay: 1.2, duration: 2.0 }}
     >
+      <Error txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
+      <div style={{height: 8, padding: 0, margin: 0}}/>
+      <Error txt={'Card.rank not in [0, 13)'}/>
+      <div style={{height: 8, padding: 0, margin: 0}}/>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4}}>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
@@ -44,7 +49,7 @@ function Home() {
           <pre style={{color: palette.fadedBlue, display: 'inline', padding: 0, margin: 0}}>{'rank'}</pre>
           <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{':'}</pre>
           <div style={{width: 8, padding: 0, margin: 0}}/>
-          <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>{'String'}</pre>
+          <pre style={{color: palette.deepBlue, display: 'inline', padding: 0, margin: 0}}>{'Int'}</pre>
         </div>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'}'}</pre>
