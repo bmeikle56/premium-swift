@@ -1,1 +1,1 @@
-[pokerdegen.app](https://pokerdegen.app) demoing PokerDegen iOS app
+[premiumswift.dev](https://premiumswift.dev) showcasing **Premium Swift**
