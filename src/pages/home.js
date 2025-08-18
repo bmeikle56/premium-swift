@@ -17,19 +17,26 @@ let palette = {
 
 function Comments() {
   return (
-    <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start'}}>
-      <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', width: '100%'}}>
-        <div style={{display: 'flex', alignItems: 'center'}}>
-          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-          <div style={{width: 8, padding: 0, margin: 0}}/>
-          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'define input range by callee such that caller must satisfy it at compile time'}</p>
-        </div>
-        <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
-          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-          <div style={{width: 8, padding: 0, margin: 0}}/>
-          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'no more guards and early exits to require proper, expected input'}</p>
-        </div>
+    <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', width: '100%'}}>
+      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+        <div style={{width: 8, padding: 0, margin: 0}}/>
+        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'define input range by callee such that caller must satisfy it at compile time'}</p>
       </div>
+      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+        <div style={{width: 8, padding: 0, margin: 0}}/>
+        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'no more guards and early exits to require proper, expected input'}</p>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+      </div>
+      <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+        <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+        <div style={{width: 8, padding: 0, margin: 0}}/>
+        <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'[ optional ]'}</p>
+      </div>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
     </div>
   )
 }
@@ -79,14 +86,9 @@ function Home() {
     animate={{ opacity: 1 }}
     transition={{ delay: 0.8, duration: 1 }}
     >
-      <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
-      <CallFunction suit={'"h"'} rank={13}/>
-
-      <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
-      <CallFunction suit={'"hearts"'} rank={12}/>
-
-
+      
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%'}}>
+        <Comments/>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
           <div style={{width: 8, padding: 0, margin: 0}}/>
@@ -173,6 +175,14 @@ function Home() {
           <pre style={{color: palette.white, display: 'inline', padding: 0, margin: 0}}>{'}'}</pre>
         </div>
       </div>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
+      <CallFunction suit={'"d"'} rank={2}/>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
+      <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
+      <CallFunction suit={'"h"'} rank={13}/>
+      <div style={{height: 24, padding: 0, margin: 0}}/>
+      <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
+      <CallFunction suit={'"hearts"'} rank={12}/>
     </motion.div>
   )
 }
