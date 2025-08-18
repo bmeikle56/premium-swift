@@ -45,9 +45,6 @@ function CallFunction({ suit, rank }) {
   return (
     <div
         style={{
-          background: 'rgb(13,13,13)',
-          padding: 20,
-          borderRadius: 20,
           display: 'flex',
           flexDirection: 'column',
           gap: 8,
@@ -55,7 +52,6 @@ function CallFunction({ suit, rank }) {
         }}
       >
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
-        <div style={{ width: 8 }} />
         <pre style={{ color: palette.green, margin: 0 }}>value</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{'('}</pre>
         <pre style={{ color: palette.green, margin: 0 }}>for</pre>
@@ -178,22 +174,27 @@ function Home() {
         </div>
       </div>
       <div style={{height: 24, padding: 0, margin: 0}}/>
-      <CallFunction suit={'"d"'} rank={2}/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%', gap: 16}}>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'proper function call, no errors thrown during compile or runtime'}</p>
+        </div>
+        <CallFunction suit={'"d"'} rank={2}/>
+      </div>
       <div style={{height: 24, padding: 0, margin: 0}}/>
-      <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
-      <CallFunction suit={'"h"'} rank={13}/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%', gap: 16}}>
+        <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
+        <CallFunction suit={'"h"'} rank={13}/>
+      </div>
       <div style={{height: 24, padding: 0, margin: 0}}/>
-      <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
-      <CallFunction suit={'"hearts"'} rank={12}/>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%', gap: 16}}>
+        <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
+        <CallFunction suit={'"hearts"'} rank={12}/>
+      </div>
       </div>
     </motion.div>
   )
 }
-
-/*
-func login(username: String in {#"^(?=.*\d)[A-Za-z\d]{8,}$"#}, password: String) async -> Bool {
-    /// request the server validate the username and password...
-}
-*/
 
 export default Home
