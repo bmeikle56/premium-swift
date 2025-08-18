@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
 import ErrorMessage from '../cmp/ErrorMessage'
+import Title from '../cmp/Title'
 
 let palette = {
   white: 'rgb(255,255,255)',
@@ -87,6 +87,7 @@ function Home() {
     transition={{ delay: 0.8, duration: 1 }}
     >
       <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '550px', width: '80vw', height: '100vh', gap: 20, whiteSpace: 'pre-wrap'}}>
+      <Title/>
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%'}}>
         <Comments/>
         <div style={{display: 'flex'}}>
