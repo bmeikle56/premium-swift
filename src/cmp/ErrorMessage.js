@@ -49,13 +49,13 @@ function Stop({
   )
 }
 
-function Error({ txt }) {
+function ErrorMessage({ txt }) {
   return (
-    <div style={{background: 'rgba(155, 41, 41, 1)', borderRadius: 4, fontSize: 11, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 0 0 6px'}}>
+    <div style={{background: 'rgba(155, 41, 41, 1)', borderRadius: 4, fontSize: 11, display: 'flex', alignItems: 'center', justifyContent: 'flex-start', width: '100%', paddingLeft: 10}}>
       <Stop/>
       <p style={{color: 'white', margin: 0, padding: '3px 6px 3px 6px'}}>{txt}</p>
     </div>
   )
 }
 
-export default Error
+export default ErrorMessage
