@@ -15,135 +15,80 @@ let palette = {
   darkComment: 'rgba(1, 81, 2, 1)',
 }
 
-function Home() {
-  const [suit, setSuit] = useState('')
-  const [rank, setRank] = useState('')
-  const [suitError, setSuitError] = useState('')
-  const [rankError, setRankError] = useState('')
-
-  function handleRun() {
-    if (!['"h"', '"s"', '"d"', '"c"'].includes(suit)) {
-      setSuitError('Card.suit not in {"h", "s", "d", "c"}');
-    }
-
-    const rankNum = Number(rank);
-    if (!Number.isInteger(rankNum) || rankNum < 0 || rankNum > 12) {
-      setRankError("Card.rank not in [0, 13)")
-      return
-    }
-
-    setSuitError("")
-    setRankError("")
-  }
-
+function Comments() {
   return (
-    <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '100vw', height: '100vh', gap: 20}}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 1.2, duration: 2.0 }}
-    >
-      {suitError && <ErrorMessage txt={suitError}/>}
-      <div style={{height: 8, padding: 0, margin: 0}}/>
-      {rankError && <ErrorMessage txt={rankError}/>}
-      <div style={{height: 8, padding: 0, margin: 0}}/>
-
-      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start'}}>
-        <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', width: '100%'}}>
-          <div style={{display: 'flex', alignItems: 'center'}}>
-            <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-            <div style={{width: 8, padding: 0, margin: 0}}/>
-            <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'define input range by callee such that caller must satisfy it at compile time'}</p>
-          </div>
-          <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
-            <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
-            <div style={{width: 8, padding: 0, margin: 0}}/>
-            <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'no more guards and early exits to require proper, expected input'}</p>
-          </div>
+    <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start'}}>
+      <div style={{display: 'flex', alignItems: 'center', flexDirection: 'column', width: '100%'}}>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'define input range by callee such that caller must satisfy it at compile time'}</p>
+        </div>
+        <div style={{display: 'flex', alignItems: 'center', width: '100%'}}>
+          <pre style={{color: palette.darkComment, display: 'inline', padding: 0, margin: 0}}>{'///'}</pre>
+          <div style={{width: 8, padding: 0, margin: 0}}/>
+          <p style={{color: palette.comment, display: 'inline', padding: 0, margin: 0, fontSize: 12}}>{'no more guards and early exits to require proper, expected input'}</p>
         </div>
       </div>
+    </div>
+  )
+}
+
+function Home() {
+  return (
+    <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '50vw', height: '100vh', gap: 20}}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.8, duration: 1 }}
+    >
+      <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
+      <div style={{height: 8, padding: 0, margin: 0}}/>
+      <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
+      <div style={{height: 8, padding: 0, margin: 0}}/>
+
+      
 
 
       <div
-      style={{
-        background: "rgb(13,13,13)",
-        padding: 20,
-        borderRadius: 20,
-        display: "flex",
-        flexDirection: "column",
-        gap: 8,
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <button
-          onClick={handleRun}
-          style={{
-            color: palette.pink,
-            padding: "4px 8px",
-            margin: 0,
-            background: "rgb(25,25,25)",
-            borderRadius: 4,
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          run
-        </button>
-
+        style={{
+          background: 'rgb(13,13,13)',
+          padding: 20,
+          borderRadius: 20,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 8,
+          width: '100%'
+        }}
+      >
+      <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         <div style={{ width: 8 }} />
 
         <pre style={{ color: palette.green, margin: 0 }}>value</pre>
-        <pre style={{ color: palette.white, margin: 0 }}>{"("}</pre>
+        <pre style={{ color: palette.white, margin: 0 }}>{'('}</pre>
         <pre style={{ color: palette.green, margin: 0 }}>for</pre>
-        <pre style={{ color: palette.white, margin: 0 }}>{":"}</pre>
+        <pre style={{ color: palette.white, margin: 0 }}>{':'}</pre>
 
         <div style={{ width: 8 }} />
 
         <pre style={{ color: palette.green, margin: 0 }}>Card</pre>
-        <pre style={{ color: palette.white, margin: 0 }}>{"("}</pre>
+        <pre style={{ color: palette.white, margin: 0 }}>{'('}</pre>
 
         <pre style={{ color: palette.green, margin: 0 }}>suit</pre>
-        <pre style={{ color: palette.white, margin: 0 }}>{":"}</pre>
-        <input
-          type="text"
-          value={suit}
-          onChange={(e) => setSuit(e.target.value)}
-          style={{
-            background: "rgb(25,25,25)",
-            border: "1px solid rgb(50,50,50)",
-            borderRadius: 4,
-            color: palette.white,
-            padding: "2px 4px",
-            marginLeft: 4,
-          }}
-        />
+        <pre style={{ color: palette.white, margin: 0 }}>{':'}</pre>
 
         <div style={{ width: 8 }} />
 
         <pre style={{ color: palette.green, margin: 0 }}>rank</pre>
-        <pre style={{ color: palette.white, margin: 0 }}>{":"}</pre>
-        <input
-          type='number'
-          value={rank}
-          onChange={(e) => setRank(e.target.value)}
-          style={{
-            background: "rgb(25,25,25)",
-            border: "1px solid rgb(50,50,50)",
-            borderRadius: 4,
-            color: palette.white,
-            padding: "2px 4px",
-            marginLeft: 4,
-            width: 60,
-          }}
-        />
+        <pre style={{ color: palette.white, margin: 0 }}>{':'}</pre>
 
-        <pre style={{ color: palette.white, margin: 0 }}>{")"}</pre>
-        <pre style={{ color: palette.white, margin: 0 }}>{")"}</pre>
+        <pre style={{ color: palette.white, margin: 0 }}>{')'}</pre>
+        <pre style={{ color: palette.white, margin: 0 }}>{')'}</pre>
       </div>
     </div>
 
 
 
-      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4}}>
+      <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%'}}>
         <div style={{display: 'flex'}}>
           <pre style={{color: palette.pink, display: 'inline', padding: 0, margin: 0}}>struct</pre>
           <div style={{width: 8, padding: 0, margin: 0}}/>
