@@ -34,22 +34,9 @@ function Comments() {
   )
 }
 
-function Home() {
+function CallFunction({ suit, rank }) {
   return (
-    <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '50vw', height: '100vh', gap: 20}}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.8, duration: 1 }}
-    >
-      <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
-      <div style={{height: 8, padding: 0, margin: 0}}/>
-      <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
-      <div style={{height: 8, padding: 0, margin: 0}}/>
-
-      
-
-
-      <div
+    <div
         style={{
           background: 'rgb(13,13,13)',
           padding: 20,
@@ -62,30 +49,41 @@ function Home() {
       >
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         <div style={{ width: 8 }} />
-
         <pre style={{ color: palette.green, margin: 0 }}>value</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{'('}</pre>
         <pre style={{ color: palette.green, margin: 0 }}>for</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{':'}</pre>
-
         <div style={{ width: 8 }} />
-
         <pre style={{ color: palette.green, margin: 0 }}>Card</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{'('}</pre>
-
         <pre style={{ color: palette.green, margin: 0 }}>suit</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{':'}</pre>
-
         <div style={{ width: 8 }} />
-
+        <pre style={{ color: palette.orange, margin: 0 }}>{suit}</pre>
+        <div style={{ width: 8 }} />
         <pre style={{ color: palette.green, margin: 0 }}>rank</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{':'}</pre>
-
+        <div style={{ width: 8 }} />
+        <pre style={{ color: palette.orange, margin: 0 }}>{rank}</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{')'}</pre>
         <pre style={{ color: palette.white, margin: 0 }}>{')'}</pre>
       </div>
     </div>
+  )
+}
 
+function Home() {
+  return (
+    <motion.div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', width: '34vw', height: '100vh', gap: 20, padding:'0 33vw 0 33vw'}}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.8, duration: 1 }}
+    >
+      <ErrorMessage txt={'Card.rank not in [0, 13)'}/>
+      <CallFunction suit={'"h"'} rank={13}/>
+
+      <ErrorMessage txt={'Card.suit not in {"h", "s", "d", "c"}'}/>
+      <CallFunction suit={'"hearts"'} rank={12}/>
 
 
       <div style={{background: 'rgb(13,13,13)', padding: 20, borderRadius: 20, display: 'flex', flexDirection: 'column', gap: 4, width: '100%'}}>
