@@ -85,6 +85,7 @@ function Home() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ delay: 0.8, duration: 1 }}
+    id='main-div'
     >
       <div style={{display: 'flex', justifyContent: 'center', alignItems:'center', flexDirection: 'column', maxWidth: '550px', width: '80vw', height: '100vh', gap: 20, whiteSpace: 'pre-wrap'}}>
       <Title/>
