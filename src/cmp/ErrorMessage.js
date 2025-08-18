@@ -49,7 +49,7 @@ function Stop({
   )
 }
 
-function Error({ txt }) {
+function ErrorMessage({ txt }) {
   return (
     <div style={{background: 'rgba(155, 41, 41, 1)', borderRadius: 4, fontSize: 11, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 0 0 6px'}}>
       <Stop/>
@@ -58,4 +58,4 @@ function Error({ txt }) {
   )
 }
 
-export default Error
+export default ErrorMessage
