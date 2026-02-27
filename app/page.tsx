@@ -6,6 +6,7 @@ import PSPre from "@/cmp/ui/pspre";
 import Wallpaper from "@/cmp/ui/wallpaper";
 import Disclaimer from "@/cmp/ui/disclaimer";
 import RotatingImages from "@/cmp/ui/rotatingimages";
+import VSpacer from "@/cmp/ui/vspacer";
 
 export default function Page() {
   return (
@@ -13,8 +14,10 @@ export default function Page() {
       <Wallpaper/>
       <Title/>
       <RotatingImages/>
+      <VSpacer h={20}/>
       <PSPre txt={'Preparing for an iOS interview?'}/>
       <PSButton txt={'Get Started'} route={'study'}/>
+      <VSpacer h={20}/>
       <Disclaimer/>
     </div>
   );
