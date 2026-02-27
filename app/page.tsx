@@ -16,7 +16,7 @@ export default function Page() {
       <RotatingImages/>
       <VSpacer h={20}/>
       <PSPre txt={'Preparing for an iOS interview?'}/>
-      <PSButton txt={'Get Started'} route={'study'}/>
+      <PSButton txt={'Get Started'} route={'/study'}/>
       <VSpacer h={20}/>
       <Disclaimer/>
     </div>

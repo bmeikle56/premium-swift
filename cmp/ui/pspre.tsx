@@ -4,7 +4,7 @@ import {
 
 export default function PSPre({ txt }: { txt: string }) {
   return (
-    <pre style={{color: txt1, margin: 0}}>
+    <pre style={{color: txt1, margin: 0, whiteSpace: 'pre-wrap'}}>
       {txt}
     </pre>
   )
