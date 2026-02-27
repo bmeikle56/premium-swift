@@ -1,8 +1,12 @@
 import Image from "next/image";
-import Support from "@/cmp/ui/Support";
+import Support from "@/cmp/ui/support";
+import Title from "@/cmp/ui/title";
 
 export default function Home() {
   return (
-    <Support/>
+    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column'}}>
+      <Title/>
+      <Support/>
+    </div>
   );
 }
