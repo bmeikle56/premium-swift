@@ -2,20 +2,18 @@ import Image from "next/image";
 import Support from "@/cmp/ui/support";
 import Title from "@/cmp/ui/title";
 import PSButton from "@/cmp/ui/psbutton";
-import PSPre from "@/cmp/ui/pspre";
+import PSParagraph from "@/cmp/ui/psparagraph";
 import Wallpaper from "@/cmp/ui/wallpaper";
-import Disclaimer from "@/cmp/ui/disclaimer";
-import RotatingImages from "@/cmp/ui/rotatingimages";
 
 export default function Page() {
   return (
     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: 40, height: '100vh'}}>
       <Wallpaper/>
       <Title/>
-      <RotatingImages/>
-      <PSPre txt={'Preparing for an iOS interview?'}/>
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        <pre></pre>
+      </div>
       <PSButton txt={'Get Started'} route={'study'}/>
-      <Disclaimer/>
     </div>
   );
 }
