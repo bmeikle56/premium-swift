@@ -1,7 +1,6 @@
 import Wallpaper from "@/cmp/ui/wallpaper";
 import { CSSProperties } from "react";
 import FadeInAnim from "@/cmp/anm/fadeinanim";
-import Navbox from "@/cmp/nav/navbox";
 import { txt1 } from "@/cmp/cst/constants";
 
 const style: CSSProperties = {
