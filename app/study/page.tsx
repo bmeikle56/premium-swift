@@ -2,6 +2,7 @@ import Wallpaper from "@/cmp/ui/wallpaper";
 import { CSSProperties } from "react";
 import FadeInAnim from "@/cmp/anm/fadeinanim";
 import Navbox from "@/cmp/nav/navbox";
+import Support from "@/cmp/ui/support";
 
 const style: CSSProperties = {
   display: 'flex', 
@@ -17,6 +18,7 @@ export default function Page() {
     <FadeInAnim style={style}>
       <Wallpaper/>
       <Navbox/>
+      <Support/>
     </FadeInAnim>
   );
 }
