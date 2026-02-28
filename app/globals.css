@@ -77,3 +77,20 @@ a, a:visited, a:hover, a:active {
     transform: translateX(-50%);
   }
 }
+
+.two-col {
+  display: flex;
+  flex-direction: row;
+  gap: 80;
+  width: 85%;
+  min-height: 100%;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+@media (max-width: 800px) {
+  .two-col {
+    flex-direction: column;
+    gap: 20;
+  }
+}
