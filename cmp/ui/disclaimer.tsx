@@ -4,8 +4,10 @@ import {
 
 export default function Disclaimer() {
   return (
-    <pre style={{margin: 0, color: txt2, fontSize: 10}}>
-      {'Swift, SwiftUI, iOS, Xcode, and Objective-C are trademarks of Apple Inc.'}
-    </pre>
+    <div style={{display: 'flex', width: 600, maxWidth: '80vw', justifyContent: 'center', alignItems: 'center'}}>
+      <pre style={{margin: 0, color: txt2, fontSize: 10, whiteSpace: 'pre-wrap'}}>
+        {'Swift, SwiftUI, iOS, Xcode, and Objective-C are trademarks of Apple Inc.'}
+      </pre>
+    </div>
   )
 }
