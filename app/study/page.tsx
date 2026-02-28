@@ -1,16 +1,22 @@
-import Image from "next/image";
-import Support from "@/cmp/ui/support";
-import Title from "@/cmp/ui/title";
-import PSButton from "@/cmp/ui/psbutton";
-import PSParagraph from "@/cmp/ui/psparagraph";
 import Wallpaper from "@/cmp/ui/wallpaper";
 import PSPre from "@/cmp/ui/pspre";
+import { CSSProperties } from "react";
+import FadeInAnim from "@/cmp/anm/fadeinanim";
+
+const style: CSSProperties = {
+  display: 'flex', 
+  justifyContent: 'center', 
+  alignItems: 'center', 
+  flexDirection: 'column', 
+  gap: 40, 
+  height: '100vh'
+}
 
 export default function Page() {
   return (
-    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column', gap: 40, height: '100vh'}}>
+    <FadeInAnim style={style}>
       <Wallpaper/>
       <PSPre txt="Coming soon!"/>
-    </div>
+    </FadeInAnim>
   );
 }
