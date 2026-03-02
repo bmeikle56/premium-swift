@@ -7,7 +7,7 @@ function Column({ children }: { children: ReactNode }) {
     display: 'flex', 
     flexDirection: 'column', 
     gap: 20, 
-    background: bg1,
+    // background: bg1,
     borderRadius: 8,
     width: '100%',
     padding: 16

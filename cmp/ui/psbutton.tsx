@@ -7,7 +7,6 @@ import {
 } from "../cst/constants"
 
 import Link from "next/link";
-import { sub } from "framer-motion/client";
 
 export default function PSButton(
   { txt, subtxt, route }: { txt: string, subtxt?: string, route: string }
@@ -27,7 +26,7 @@ export default function PSButton(
     <Link href={route} passHref>
       <div style={style}>
         <pre style={{ color: txt1, margin: 0 }}>{txt}</pre>
-        {subtxt && <pre style={{ color: txt2, margin: 0, fontSize: 10, paddingTop: 6 }}>{subtxt}</pre>}
+        {subtxt && <pre style={{ color: txt2, margin: 0, fontSize: 11, paddingTop: 6 }}>{subtxt}</pre>}
       </div>
     </Link>
   );
