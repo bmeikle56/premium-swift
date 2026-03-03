@@ -9,22 +9,20 @@ export default function PSCodeBlock({ lines }: PSCodeBlockProps) {
     <div
       style={{
         fontFamily: "monospace",
-        whiteSpace: "pre",        
+        whiteSpace: "pre-wrap", // preserves spaces and indentation
+        overflowX: "auto", // allow horizontal scroll on small screens
+        padding: "8px 0", // optional padding
       }}
     >
       {lines.map((line, lineIndex) => (
-        <div key={lineIndex} style={{ display: "block" }}>
+        <div key={lineIndex}>
           {line.map(([txt, color], tokenIndex) => (
-            <pre
+            <span
               key={tokenIndex}
-              style={{
-                display: "inline",
-                margin: 0,
-                color,
-              }}
+              style={{ color }}
             >
               {txt}
-            </pre>
+            </span>
           ))}
         </div>
       ))}
