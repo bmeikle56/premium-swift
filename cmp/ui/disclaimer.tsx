@@ -1,6 +1,6 @@
 import { 
   txt2
-} from "../cst/constants"
+} from "../cst/colors"
 
 export default function Disclaimer() {
   return (

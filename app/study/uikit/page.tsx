@@ -1,7 +1,7 @@
 import Wallpaper from "@/cmp/ui/wallpaper";
 import { CSSProperties } from "react";
 import FadeInAnim from "@/cmp/anm/fadeinanim";
-import { txt1 } from "@/cmp/cst/constants";
+import { txt1 } from "@/cmp/cst/colors";
 
 const style: CSSProperties = {
   display: 'flex', 

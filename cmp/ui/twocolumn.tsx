@@ -1,16 +1,15 @@
 import { ReactNode } from "react"
 import { CSSProperties } from "react"
-import { bg1 } from "../cst/constants"
 
 function Column({ children }: { children: ReactNode }) {
   const style: CSSProperties = {
     display: 'flex', 
     flexDirection: 'column', 
     gap: 20, 
-    // background: bg1,
+    alignItems: 'center',
     borderRadius: 8,
     width: '100%',
-    padding: 16
+    padding: 0
   }
 
   return (

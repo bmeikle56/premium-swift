@@ -1,6 +1,6 @@
 import { 
   txt1
-} from "../cst/constants"
+} from "../cst/colors"
 
 export default function PSParagraph({ txt, center }: { txt: string, center?: boolean }) {
   return (

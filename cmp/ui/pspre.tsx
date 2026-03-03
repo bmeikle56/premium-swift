@@ -1,7 +1,7 @@
 import { 
   bg1,
   txt1
-} from "../cst/constants"
+} from "../cst/colors"
 
 export default function PSPre({ txt }: { txt: string }) {
   return (

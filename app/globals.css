@@ -82,7 +82,7 @@ a, a:visited, a:hover, a:active {
   display: flex;
   flex-direction: row;
   gap: 80;
-  width: 85%;
+  width: 80%;
   min-height: 100%;
   padding-top: 5vh;
   padding-bottom: 5vh;

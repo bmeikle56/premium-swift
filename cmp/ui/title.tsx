@@ -1,7 +1,7 @@
 import { 
   txt2,
   pur1
-} from "../cst/constants"
+} from "../cst/colors"
 
 export default function Title() {
   return (

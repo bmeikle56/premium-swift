@@ -4,7 +4,7 @@ import {
   txt1,
   txt2,
   pur1
-} from "../cst/constants"
+} from "../cst/colors"
 
 import Link from "next/link";
 

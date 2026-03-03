@@ -2,7 +2,7 @@ import {
   bg1,
   txt1,
   pur1
-} from "../cst/constants"
+} from "../cst/colors"
 
 export default function Support() {
   return (
