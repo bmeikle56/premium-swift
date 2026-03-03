@@ -15,25 +15,7 @@ import {
   appStorage,
   bindable
 } from "@/cmp/cst/propertywrappers";
-
-/*
-const codeData: [string, string][][] = [
-    [
-      ["func ", "rgb(255,0,0)"],
-      ["getValue", "rgb(0,0,255)"],
-      ["(from val: Int?) async -> Int {", "rgb(255,255,255)"],
-    ],
-    [
-      ["  ", "rgb(255,255,255)"], // indent
-      ["return ", "rgb(255,0,0)"],
-      ["val", "rgb(0,0,255)"],
-      [" ?? 0", "rgb(255,255,255)"],
-    ],
-    [
-      ["}", "rgb(255,255,255)"],
-    ],
-  ];
-*/
+import { cellsCode } from "@/cmp/cst/codesnippets";
 
 function Left() {
   return (
@@ -63,7 +45,10 @@ function Left() {
 
 function Right() {
   return (
-    <PSPre txt="Some code snippets that'll be added soon..."/>
+    <>
+      <PSPre txt="Let's walk through the following problem and a solution"/>
+      <PSCode lines={cellsCode}/>
+    </>
   )
 }
 
